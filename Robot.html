@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Robot</title>
+        <!-- Metadati Bootswatch -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.css"
+        integrity="sha256-jN1/3LSOsvNEnOHn1sEOHXKA8RsU+Q7Wk7PE3dLe8Os=" crossorigin="anonymous">
+        <!--Metadati di p5.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>                
+        <style>
+            html, body { margin: 0; padding: 0; }
+            canvas { display: block; }
+        </style>
+    </head>
+<body>
+        <script>
+
+function setup() {
+            createCanvas(600, 600);
+}
+            function draw() {
+            background(200,200,200);
+            fill(200,0,150)
+            square(mouseX,mouseY,100)            
+            fill(255,255,255)
+            circle(mouseX+20,mouseY+20,15)   
+            fill(255,255,255)
+            circle(mouseX+80,mouseY+20,15)     
+            fill(255,255,255)
+            rect(mouseX+20,mouseY+60,60,26)         
+            fill(150,150,150)
+            line(mouseX+40,mouseY+60,mouseX+40,mouseY+86)           
+            fill(150,150,150)
+            line(mouseX+60,mouseY+60,mouseX+60,mouseY+86)      
+            fill(200,0,150)
+            rect(mouseX+35,mouseY+100,30,20)   
+            fill(200,0,150)
+            rect(mouseX-10,mouseY+120,120,160)        
+            fill(200,0,150)
+            rect(mouseX-35,mouseY+125,25,80)           
+            fill(150,150,150)
+            arc(mouseX-20,mouseY+210,37,37,90,270)            
+            fill(200,0,150)
+            rect(mouseX+110,mouseY+125,25,80)        
+            fill(150,150,150)
+            arc(mouseX+120,mouseY+205,37,37,160,360)            
+            fill(200,0,150)
+            rect(mouseX,mouseY+280,25,100)
+            fill(200,0,150)
+            rect(mouseX+80,mouseY+280,25,100)
+            fill(150,150,150)
+            ellipse(mouseX+10,mouseY+380,40,10)  
+            fill(150,150,150)
+            ellipse(mouseX+90,mouseY+380,40,10)
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+        integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+       <script>
+        (function () {
+          'use strict';
+    
+          $(window).scroll(function () {
+            var top = $(document).scrollTop();
+            if (top > 50) {
+              $('#home > .navbar').removeClass('navbar-transparent');
+            } else {
+              $('#home > .navbar').addClass('navbar-transparent');
+            }
+          })
+    
+          $('a[href="#"]').click(function (event) {
+            event.preventDefault();
+          })
+    
+          // $('.alert').alert()
+          // $('.carousel').carousel();
+          $('.bs-component [data-toggle="popover"]').popover();
+          $('.bs-component [data-toggle="tooltip"]').tooltip();
+          $('.bs-component [data-toggle="popover"]').popover();
+          // $('.bs-component .modal-dialog').modal();
+        })();
+      </script>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home Page
+            <span class="sr-only">(current)</span>
+            </a>
+            
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">Menù degli esercizi</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="Squadra.html">Formazione squadra</a>
+              <a class="dropdown-item" href="Orologio.html">Orologio</a>
+              <a class="dropdown-item" href="Robot.html">Robot</a>
+              <a class="dropdown-item" href="Softskills.html">Soft Skills</a>
+            </div>
+          </li>
+        </ul>
+        </div>
+        </nav>
+        
+        <h1>Esercizio su p5.js</h1>
+      <p>Robot che si muove sull'asse x e sull'asse y tramite utilizzo del mouse</p>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset= "utf-8">
+        <meta name="viewpart" content="width=device-width, initial-scale=1">
+        <title>Orologio Analogico</title>
+        <!-- Metadati Bootswatch -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.3/dist/darkly/bootstrap.css"
+        integrity="sha256-jN1/3LSOsvNEnOHn1sEOHXKA8RsU+Q7Wk7PE3dLe8Os=" crossorigin="anonymous">
+        <!--Metadati di p5.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+        <style>
+            html, body { margin: 0; padding: 0}
+            canvas { display: block; }
+        </style>
+<script>
+            function setup() {
+                createCanvas(400, 400);
+                angleMode(DEGREES);
+                 img = loadImage('orologio 2050.png');
+            }
+            function draw() {
+                background(220)
+                image(img, 0, 0);
+                var h = new Date().getHours();
+                var m = new Date().getMinutes();
+                var s = new Date().getSeconds();
+                fill(255, 255, 255);
+                circle(200, 200, 200);
+                fill(220, 100, 100);
+                arc(200, 200, 150, 150, (s*6)-93, (s*6)-86);
+                fill(120, 100, 120);
+                arc(200, 200, 125, 125, (m*6)-93, (m*6)-86);
+                fill(200, 100, 200);
+                 arc(200, 200, 100, 100, (h*30)-93, (h*30)-86);
+                 fill(150,60,200);
+                 textSize(16);
+                 fill(0,0,0);
+                 text("12",190,117);
+                 text("1",248,140);
+                 text("2",278,170);
+                 text("3",287,209);
+                 text("4",268,252);
+                 text("5",240,280);
+                 text("6",194,297);
+                 text("7",155,280);
+                 text("8",120,252);
+                 text("9",107,209);
+                 text("10",113,170);
+                 text("11",138,140);
+                 }
+        </script>
+    </head>
+    <body>
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js"
+    integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+   <script>
+    (function () {
+      'use strict';
+
+      $(window).scroll(function () {
+        var top = $(document).scrollTop();
+        if (top > 50) {
+          $('#home > .navbar').removeClass('navbar-transparent');
+        } else {
+          $('#home > .navbar').addClass('navbar-transparent');
+        }
+      })
+
+      $('a[href="#"]').click(function (event) {
+        event.preventDefault();
+      })
+
+      // $('.alert').alert()
+      // $('.carousel').carousel();
+      $('.bs-component [data-toggle="popover"]').popover();
+      $('.bs-component [data-toggle="tooltip"]').tooltip();
+      $('.bs-component [data-toggle="popover"]').popover();
+      // $('.bs-component .modal-dialog').modal();
+    })();
+  </script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+    <a class="nav-link" href="index.html">Home Page
+    <span class="sr-only">(current)</span>
+    </a>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+    aria-expanded="false">Menù degli esercizi</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="Squadra.html">Formazione squadra</a>
+      <a class="dropdown-item" href="Orologio.html">Orologio</a>
+      <a class="dropdown-item" href="Robot.html">Robot</a>
+      <a class="dropdown-item" href="Softskills.html">Soft Skills</a>
+    </div>
+  </li>
+</ul>
+</div>
+</nav>
+<h1>Esercizio su p5.js</h1>
+<p1>Orologio Analogico</p1>
+</body>
+</html>
